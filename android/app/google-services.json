@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "779758031854",
+    "firebase_url": "https://alpucart.firebaseio.com",
+    "project_id": "alpucart",
+    "storage_bucket": "alpucart.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:779758031854:android:b58707040702d4d85574ff",
+        "android_client_info": {
+          "package_name": "com.alpucart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "779758031854-097u5a40a0sdft817rhskv4adou48k2l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfu4sDZCQ_Th_sbh3mJYmfvjHStS0hUsw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "779758031854-097u5a40a0sdft817rhskv4adou48k2l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
