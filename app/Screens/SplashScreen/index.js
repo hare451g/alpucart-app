@@ -1,8 +1,7 @@
 import React, {useEffect} from 'react';
-import {connect} from 'react-redux';
-import {SafeAreaView, Image, View, Text, StatusBar} from 'react-native';
+import {SafeAreaView, Image, View, StatusBar} from 'react-native';
 
-import AlpucartLogo from '../../images/alpucart-logo';
+import AlpucartLogo from '../../images/alpucart-logo.png';
 
 function SplashScreen(props) {
   useEffect(() => {
@@ -14,7 +13,12 @@ function SplashScreen(props) {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+        <View
+          style={{
+            flex: 1,
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
           <Image source={AlpucartLogo} />
         </View>
       </SafeAreaView>
@@ -22,8 +26,8 @@ function SplashScreen(props) {
   );
 }
 
-const mapDispatchToProps = dispatch => ({});
+SplashScreen.navigationOptions = () => ({
+  headerShown: false,
+});
 
-const mapStateToProps = state => ({});
-
-export default connect(mapStateToProps, mapDispatchToProps)(SplashScreen);
+export default SplashScreen;
