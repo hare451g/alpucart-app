@@ -1,26 +1,25 @@
 import React, {useEffect} from 'react';
-import {SafeAreaView, Image, View, StatusBar} from 'react-native';
+import {Image, StatusBar} from 'react-native';
 
 import AlpucartLogo from '../../images/alpucart-logo.png';
 
-function SplashScreen(props) {
+import {SafeAreaView, ImageContainer} from './styled';
+
+function SplashScreen({navigation}) {
+  const SPLASH_SCREEN_TIMEOUT = 3000;
   useEffect(() => {
     setTimeout(() => {
-      props.navigation.navigate('HomeScreen');
-    }, 3000);
+      navigation.navigate('HomeScreen');
+    }, SPLASH_SCREEN_TIMEOUT);
   }, []);
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <View
-          style={{
-            flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
+        <ImageContainer>
           <Image source={AlpucartLogo} />
-        </View>
+        </ImageContainer>
       </SafeAreaView>
     </>
   );
