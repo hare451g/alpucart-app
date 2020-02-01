@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react';
-import {Image, StatusBar} from 'react-native';
+import {StatusBar} from 'react-native';
 
 import AlpucartLogo from '../../images/alpucart-logo.png';
 
-import {SafeAreaView, ImageContainer} from './styled';
+import {SafeAreaView, ImageContainer, Logo} from './styled';
 
 function SplashScreen({navigation}) {
   const SPLASH_SCREEN_TIMEOUT = 3000;
@@ -18,7 +18,7 @@ function SplashScreen({navigation}) {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <ImageContainer>
-          <Image source={AlpucartLogo} />
+          <Logo source={AlpucartLogo} />
         </ImageContainer>
       </SafeAreaView>
     </>

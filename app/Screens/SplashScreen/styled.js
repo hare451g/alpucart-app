@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import {SafeAreaView as BaseSafeAreaView, View} from 'react-native';
+import {SafeAreaView as BaseSafeAreaView, View, Image} from 'react-native';
 
 const SafeAreaView = styled(BaseSafeAreaView)`
   background-color: #fff;
@@ -12,4 +12,9 @@ const ImageContainer = styled(View)`
   justify-content: center;
 `;
 
-export {SafeAreaView, ImageContainer};
+const Logo = styled(Image)`
+  height: 52px;
+  width: 155px;
+`;
+
+export {SafeAreaView, ImageContainer, Logo};
