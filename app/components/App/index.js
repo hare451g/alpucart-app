@@ -4,14 +4,21 @@ import {createStackNavigator} from 'react-navigation-stack';
 import {createAppContainer} from 'react-navigation';
 
 import HomeScreen from '../../Screens/HomeScreen';
+import SplashScreen from '../../Screens/SplashScreen';
+
 import store from '../../store';
 
-const AppNavigator = createStackNavigator({
-  Home: {
+const routes = {
+  HomeScreen: {
     screen: HomeScreen,
   },
-});
+  SplashScreen: {
+    screen: SplashScreen,
+  },
+};
+const routeOptions = {initialRouteName: 'SplashScreen'};
 
+const AppNavigator = createStackNavigator(routes, routeOptions);
 const AppContainer = createAppContainer(AppNavigator);
 
 function App() {
