@@ -9,7 +9,7 @@ function SplashScreen({navigation}) {
   const SPLASH_SCREEN_TIMEOUT = 3000;
   useEffect(() => {
     setTimeout(() => {
-      navigation.navigate('HomeScreen');
+      navigation.navigate('LandingScreen');
     }, SPLASH_SCREEN_TIMEOUT);
   }, []);
 
