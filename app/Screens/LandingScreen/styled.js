@@ -1,7 +1,6 @@
 import styled from 'styled-components/native';
 import {
   SafeAreaView as BaseSafeAreaView,
-  TouchableOpacity,
   View,
   Text,
   Image,
@@ -56,20 +55,6 @@ const ButtonContainer = styled(View)`
   padding: 8px 16px;
 `;
 
-const Button = styled(TouchableOpacity)`
-  border-radius: 8px;
-  min-height: 42px;
-  min-width: 120px;
-  align-items: center;
-  justify-content: center;
-  margin-top: 12px;
-  background-color: #2eab53;
-`;
-
-const ButtonLabel = styled(Text)`
-  color: #ffffff;
-`;
-
 export {
   SafeAreaView,
   ImageContainer,
@@ -78,6 +63,4 @@ export {
   WelcomeTitle,
   WelcomeMessage,
   ButtonContainer,
-  Button,
-  ButtonLabel,
 };

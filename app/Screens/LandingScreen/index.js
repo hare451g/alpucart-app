@@ -3,16 +3,16 @@ import {StatusBar, ScrollView, View, Image, Text} from 'react-native';
 
 import AlpucartLogo from '../../images/alpucart-logo.png';
 
+import Button from '../../components/Button';
+
 import {
   SafeAreaView,
-  Button,
   ImageContainer,
   Logo,
   WelcomeContainer,
   WelcomeTitle,
   WelcomeMessage,
   ButtonContainer,
-  ButtonLabel,
 } from './styled';
 
 function LandingScreen(props) {
@@ -30,12 +30,8 @@ function LandingScreen(props) {
           </WelcomeMessage>
         </WelcomeContainer>
         <ButtonContainer>
-          <Button>
-            <ButtonLabel>Registrasi</ButtonLabel>
-          </Button>
-          <Button>
-            <ButtonLabel>Login</ButtonLabel>
-          </Button>
+          <Button> Registrasi </Button>
+          <Button isOutline> Login </Button>
         </ButtonContainer>
       </SafeAreaView>
     </>
