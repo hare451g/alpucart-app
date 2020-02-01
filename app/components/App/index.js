@@ -1,18 +1,14 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, View, Text, StatusBar} from 'react-native';
+import {Provider} from 'react-redux';
+
+import HomeScreen from '../../Screens/HomeScreen';
+import store from '../../store';
 
 function App() {
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView contentInsetAdjustmentBehavior="automatic">
-          <View>
-            <Text>Alpucart</Text>
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
+    <Provider store={store}>
+      <HomeScreen />
+    </Provider>
   );
 }
 
