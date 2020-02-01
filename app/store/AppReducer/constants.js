@@ -1,0 +1,6 @@
+const CONTEXT = 'store/AppReducer';
+
+const STOP_LOADING = `${CONTEXT}/STOP_LOADING`;
+const START_LOADING = `${CONTEXT}/SET_LOADING`;
+
+export {STOP_LOADING, START_LOADING};
