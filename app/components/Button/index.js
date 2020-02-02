@@ -2,10 +2,12 @@ import React from 'react';
 
 import {Container, Label} from './styled';
 
-function Button({isOutline, children, ...rest}) {
+function Button({isOutline, isNaked, children, ...rest}) {
   return (
-    <Container isOutline={isOutline} {...rest}>
-      <Label isOutline={isOutline}>{children}</Label>
+    <Container isOutline={isOutline} isNaked={isNaked} {...rest}>
+      <Label isOutline={isOutline} isNaked={isNaked}>
+        {children}
+      </Label>
     </Container>
   );
 }

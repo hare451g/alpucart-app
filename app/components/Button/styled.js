@@ -11,6 +11,13 @@ const Container = styled(TouchableOpacity)`
   margin-top: 12px;
   border: solid 1px #2eab53;
   background-color: ${props => (props.isOutline ? '#fff' : '#2eab53')};
+
+  ${props =>
+    props.isNaked &&
+    `
+    border: none;
+    background-color: transparent;
+  `}
 `;
 
 const Label = styled(Text)`
@@ -19,6 +26,11 @@ const Label = styled(Text)`
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+  ${props =>
+    props.isNaked &&
+    `
+    color: #2eab53;
+  `}
 `;
 
 export {Container, Label};
