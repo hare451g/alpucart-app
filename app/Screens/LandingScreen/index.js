@@ -37,7 +37,9 @@ function LandingScreen({navigation}) {
           <Button onPress={() => navigateTo('RegisterScreen')}>
             Registrasi
           </Button>
-          <Button isOutline> Login </Button>
+          <Button onPress={() => navigateTo('LoginScreen')} isOutline>
+            Login
+          </Button>
         </ButtonContainer>
       </SafeAreaView>
     </>
