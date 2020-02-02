@@ -73,6 +73,24 @@
 		<string>Montserrat-SemiBoldItalic.ttf</string>
 		<string>Montserrat-Thin.ttf</string>
 		<string>Montserrat-ThinItalic.ttf</string>
+		<string>Montserrat_black_italic.ttf</string>
+		<string>Montserrat_black.ttf</string>
+		<string>Montserrat_bold_italic.ttf</string>
+		<string>Montserrat_bold.ttf</string>
+		<string>Montserrat_extra_bold_italic.ttf</string>
+		<string>Montserrat_extra_bold.ttf</string>
+		<string>Montserrat_extra_light_italic.ttf</string>
+		<string>Montserrat_extra_light.ttf</string>
+		<string>Montserrat_italic.ttf</string>
+		<string>Montserrat_light_italic.ttf</string>
+		<string>Montserrat_light.ttf</string>
+		<string>Montserrat_medium_italic.ttf</string>
+		<string>Montserrat_medium.ttf</string>
+		<string>Montserrat_semi_bold_italic.ttf</string>
+		<string>Montserrat_semi_bold.ttf</string>
+		<string>Montserrat_thin_italic.ttf</string>
+		<string>Montserrat_thin.ttf</string>
+		<string>Montserrat.ttf</string>
 	</array>
 </dict>
 </plist>
