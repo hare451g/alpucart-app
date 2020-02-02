@@ -6,7 +6,19 @@ import {createAppContainer} from 'react-navigation';
 import routes from '../../constants/routes';
 import store from '../../store';
 
-const routeOptions = {initialRouteName: 'SplashScreen'};
+const routeOptions = {
+  initialRouteName: 'SplashScreen',
+  defaultNavigationOptions: {
+    headerStyle: {
+      elevation: 0,
+    },
+    headerTitleStyle: {
+      fontFamily: 'Montserrat_semi_bold',
+      fontSize: 18,
+    },
+    headerTitleAlign: 'center',
+  },
+};
 
 const AppNavigator = createStackNavigator(routes, routeOptions);
 const AppContainer = createAppContainer(AppNavigator);
