@@ -3,23 +3,9 @@ import {Provider} from 'react-redux';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createAppContainer} from 'react-navigation';
 
-import HomeScreen from '../../Screens/HomeScreen';
-import SplashScreen from '../../Screens/SplashScreen';
-import LandingScreen from '../../Screens/LandingScreen';
-
+import routes from '../../constants/routes';
 import store from '../../store';
 
-const routes = {
-  HomeScreen: {
-    screen: HomeScreen,
-  },
-  LandingScreen: {
-    screen: LandingScreen,
-  },
-  SplashScreen: {
-    screen: SplashScreen,
-  },
-};
 const routeOptions = {initialRouteName: 'SplashScreen'};
 
 const AppNavigator = createStackNavigator(routes, routeOptions);
