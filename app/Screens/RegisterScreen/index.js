@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {StatusBar} from 'react-native';
-import {} from 'react-native-material-ui';
 
 import AlpucartLogo from '../../images/alpucart-logo.png';
 
