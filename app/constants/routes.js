@@ -2,6 +2,7 @@ import HomeScreen from '../Screens/HomeScreen';
 import SplashScreen from '../Screens/SplashScreen';
 import LandingScreen from '../Screens/LandingScreen';
 import RegisterScreen from '../Screens/RegisterScreen';
+import LoginScreen from '../Screens/LoginScreen';
 
 const routes = {
   HomeScreen: {
@@ -15,6 +16,9 @@ const routes = {
   },
   RegisterScreen: {
     screen: RegisterScreen,
+  },
+  LoginScreen: {
+    screen: LoginScreen,
   },
 };
 
