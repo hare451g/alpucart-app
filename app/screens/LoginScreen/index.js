@@ -13,7 +13,10 @@ import {
   ButtonContainer,
 } from './styled';
 
-function LoginScreen(props) {
+function LoginScreen({navigation}) {
+  const navigateTo = screenName => {
+    navigation.navigate(screenName);
+  };
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -30,7 +33,7 @@ function LoginScreen(props) {
         </TextInputContainer>
 
         <ButtonContainer>
-          <Button> Login </Button>
+          <Button onPress={() => navigateTo('OTPScreen')}> Login </Button>
         </ButtonContainer>
       </SafeAreaView>
     </>

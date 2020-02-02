@@ -14,7 +14,10 @@ import {
   ButtonContainer,
 } from './styled';
 
-function RegisterScreen(props) {
+function RegisterScreen({navigation}) {
+  const navigateTo = screenName => {
+    navigation.navigate(screenName);
+  };
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -38,13 +41,17 @@ function RegisterScreen(props) {
         </TextInputContainer>
 
         <ButtonContainer>
-          <Button> Registrasi Akun </Button>
+          <Button onPress={() => navigateTo('OTPScreen')}>
+            Registrasi Akun
+          </Button>
         </ButtonContainer>
         <ButtonContainer>
           <Typography style={{fontSize: 14}} isCenter>
             Sudah punya akun ?
           </Typography>
-          <Button isNaked> Login Disini </Button>
+          <Button onPress={() => navigateTo('LoginScreen')} isNaked>
+            Login Disini
+          </Button>
         </ButtonContainer>
       </SafeAreaView>
     </>
