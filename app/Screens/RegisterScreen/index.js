@@ -1,28 +1,20 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {StatusBar} from 'react-native';
-
-import AlpucartLogo from '../../images/alpucart-logo.png';
+import {TextField} from 'react-native-material-textfield';
 
 import Button from '../../components/Button';
+import Typography from '../../components/Typography';
+import AlpucartLogo from '../../images/alpucart-logo.png';
 
 import {
   SafeAreaView,
   ImageContainer,
   Logo,
   TextInputContainer,
-  TextInputLabel,
-  TextInput,
   ButtonContainer,
 } from './styled';
 
 function RegisterScreen(props) {
-  const [isFocused, setFocus] = useState(false);
-
-  const onFocus = e => {
-    console.log(e.target);
-    setFocus(true);
-  };
-
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -30,14 +22,29 @@ function RegisterScreen(props) {
         <ImageContainer>
           <Logo source={AlpucartLogo} />
         </ImageContainer>
-
-        <TextInputContainer isFocused={isFocused}>
-          <TextInputLabel isFocused={isFocused}>Nama Lengkap</TextInputLabel>
-          <TextInput onFocus={onFocus} isFocused={isFocused} />
+        <TextInputContainer>
+          <TextField
+            label="Nama Lengkap"
+            keyboardType="default"
+            tintColor={'#2eab53'}
+          />
+        </TextInputContainer>
+        <TextInputContainer>
+          <TextField
+            label="Nomor Telepon"
+            keyboardType="phone-pad"
+            tintColor={'#2eab53'}
+          />
         </TextInputContainer>
 
         <ButtonContainer>
-          <Button isOutline> Login </Button>
+          <Button> Registrasi Akun </Button>
+        </ButtonContainer>
+        <ButtonContainer>
+          <Typography style={{fontSize: 14}} isCenter>
+            Sudah punya akun ?
+          </Typography>
+          <Button isNaked> Login Disini </Button>
         </ButtonContainer>
       </SafeAreaView>
     </>

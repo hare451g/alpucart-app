@@ -1,8 +1,6 @@
 import styled from 'styled-components/native';
 import {SafeAreaView as BaseSafeAreaView} from 'react-native';
 
-import Typography from '../../components/Typography';
-
 const SafeAreaView = styled(BaseSafeAreaView)`
   flex: 1;
   flex-direction: column;
@@ -24,25 +22,8 @@ const Logo = styled.Image`
 `;
 
 const TextInputContainer = styled.View`
-  border-bottom-width: 1px;
-  border-bottom-color: #333333;
-  margin: 0px 16px;
+  margin: 4px 16px;
   min-height: 42px;
-  justify-content: center;
-`;
-
-const TextInputLabel = styled(Typography)`
-  padding: 0px 8px;
-  font-weight: 400;
-  font-size: 14px;
-`;
-
-const TextInput = styled.TextInput`
-  padding: 0px 8px;
-  height: 0px;
-  font-size: 14px;
-  background-color: red;
-  font-family: 'Montserrat';
 `;
 
 const ButtonContainer = styled.View`
@@ -55,7 +36,5 @@ export {
   ImageContainer,
   Logo,
   TextInputContainer,
-  TextInputLabel,
-  TextInput,
   ButtonContainer,
 };
