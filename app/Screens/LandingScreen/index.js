@@ -15,7 +15,11 @@ import {
   ButtonContainer,
 } from './styled';
 
-function LandingScreen(props) {
+function LandingScreen({navigation}) {
+  const navigateTo = screenName => {
+    navigation.navigate(screenName);
+  };
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -30,7 +34,9 @@ function LandingScreen(props) {
           </WelcomeMessage>
         </WelcomeContainer>
         <ButtonContainer>
-          <Button> Registrasi </Button>
+          <Button onPress={() => navigateTo('RegisterScreen')}>
+            Registrasi
+          </Button>
           <Button isOutline> Login </Button>
         </ButtonContainer>
       </SafeAreaView>

@@ -6,6 +6,8 @@ import {
   Image,
 } from 'react-native';
 
+import Typography from '../../components/Typography';
+
 const SafeAreaView = styled(BaseSafeAreaView)`
   flex: 1;
   flex-direction: column;
@@ -31,7 +33,7 @@ const WelcomeContainer = styled(View)`
   justify-content: center;
 `;
 
-const WelcomeTitle = styled(Text)`
+const WelcomeTitle = styled(Typography)`
   padding: 4px 16px;
   text-align: center;
   font-style: normal;
@@ -40,12 +42,11 @@ const WelcomeTitle = styled(Text)`
   color: #2eab53;
 `;
 
-const WelcomeMessage = styled(Text)`
+const WelcomeMessage = styled(Typography)`
   padding: 0 16px;
   line-height: 21px;
   text-align: center;
   font-style: normal;
-  font-weight: 500;
   font-size: 14px;
   color: #2eab53;
 `;
