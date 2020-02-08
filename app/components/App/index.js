@@ -3,24 +3,10 @@ import {Provider} from 'react-redux';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createAppContainer} from 'react-navigation';
 
-import routes from '../../constants/routes';
+import {homeRoutes, homeRouteOptions} from '../../constants/home.routes';
 import store from '../../store';
 
-const routeOptions = {
-  initialRouteName: 'SplashScreen',
-  defaultNavigationOptions: {
-    headerStyle: {
-      elevation: 0,
-    },
-    headerTitleStyle: {
-      fontFamily: 'Montserrat_semi_bold',
-      fontSize: 18,
-    },
-    headerTitleAlign: 'center',
-  },
-};
-
-const AppNavigator = createStackNavigator(routes, routeOptions);
+const AppNavigator = createStackNavigator(homeRoutes, homeRouteOptions);
 const AppContainer = createAppContainer(AppNavigator);
 
 function App() {
