@@ -58,6 +58,15 @@ const ProductPrice = styled.Text`
   margin-top: 16px;
 `;
 
+const ProductDescriptions = styled.Text`
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  color: #000;
+`;
+
 export {
   ModalContainer,
   ModalContent,
@@ -67,4 +76,5 @@ export {
   ProductInfo,
   ProductName,
   ProductPrice,
+  ProductDescriptions,
 };

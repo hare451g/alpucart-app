@@ -11,6 +11,7 @@ import {
   ProductInfo,
   ProductName,
   ProductPrice,
+  ProductDescriptions,
 } from './styled';
 
 function ProductModal({
@@ -40,6 +41,7 @@ function ProductModal({
                 <ProductPrice>Rp. {price}</ProductPrice>
               </ProductInfo>
             </ProductInfoContainer>
+            <ProductDescriptions>{descriptions}</ProductDescriptions>
           </ModalContent>
         </ModalContainer>
       </Modal>
