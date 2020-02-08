@@ -20,7 +20,6 @@ const homeRouteOptions = {
       fontFamily: 'Montserrat_semi_bold',
       fontSize: 18,
     },
-    headerTitleAlign: 'center',
   },
 };
 
