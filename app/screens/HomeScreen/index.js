@@ -14,7 +14,7 @@ function HomeScreen({startLoading, stopLoading, isLoading}) {
 
   return (
     <>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar barStyle="light-content" />
       <SafeAreaView>
         <ScrollView contentInsetAdjustmentBehavior="automatic">
           <View>
@@ -33,6 +33,10 @@ const mapDispatchToProps = dispatch => ({
 
 const mapStateToProps = state => ({
   isLoading: state.app.isLoading,
+});
+
+HomeScreen.navigationOptions = () => ({
+  headerShown: false,
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
