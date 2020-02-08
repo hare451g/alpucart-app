@@ -1,24 +1,14 @@
-import React, {useEffect} from 'react';
-import {connect} from 'react-redux';
+import React from 'react';
 import {SafeAreaView, ScrollView, View, Text, StatusBar} from 'react-native';
 
-import {startLoading, stopLoading} from '../../store/AppReducer/actions';
-
-function HomeScreen({startLoading, stopLoading, isLoading}) {
-  useEffect(() => {
-    startLoading();
-    setTimeout(() => {
-      stopLoading();
-    }, 3000);
-  }, []);
-
+function HomeScreen() {
   return (
     <>
       <StatusBar barStyle="light-content" />
       <SafeAreaView>
         <ScrollView contentInsetAdjustmentBehavior="automatic">
           <View>
-            {isLoading ? <Text>Loading...</Text> : <Text>Alpucart</Text>}
+            <Text>Alpucart</Text>
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -26,17 +16,8 @@ function HomeScreen({startLoading, stopLoading, isLoading}) {
   );
 }
 
-const mapDispatchToProps = dispatch => ({
-  startLoading: () => dispatch(startLoading()),
-  stopLoading: () => dispatch(stopLoading()),
-});
-
-const mapStateToProps = state => ({
-  isLoading: state.app.isLoading,
-});
-
 HomeScreen.navigationOptions = () => ({
   headerShown: false,
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
+export default HomeScreen;
