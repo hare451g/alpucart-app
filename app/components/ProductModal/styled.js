@@ -40,7 +40,7 @@ const ProductImage = styled.Image`
   border-radius: 8px;
 `;
 
-const ProductName = styled.Text`
+const BoldLabel = styled.Text`
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
@@ -48,7 +48,7 @@ const ProductName = styled.Text`
   line-height: 21px;
 `;
 
-const ProductPrice = styled.Text`
+const RedLabel = styled.Text`
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
@@ -67,6 +67,44 @@ const ProductDescriptions = styled.Text`
   color: #000;
 `;
 
+const SeparateSection = styled.View`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 8px 0px;
+`;
+
+const CounterButton = styled.TouchableOpacity`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #2eab53;
+  border-radius: 8px;
+
+  ${props =>
+    props.isAdd
+      ? `
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  `
+      : `
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  `}
+`;
+
+const CounterLabel = styled.View`
+  width: 30px;
+  height: 30px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 export {
   ModalContainer,
   ModalContent,
@@ -74,7 +112,10 @@ export {
   ProductInfoContainer,
   ProductImage,
   ProductInfo,
-  ProductName,
-  ProductPrice,
+  BoldLabel,
+  RedLabel,
   ProductDescriptions,
+  SeparateSection,
+  CounterButton,
+  CounterLabel,
 };

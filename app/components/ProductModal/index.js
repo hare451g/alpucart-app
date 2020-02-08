@@ -9,16 +9,25 @@ import {
   ProductInfoContainer,
   ProductImage,
   ProductInfo,
-  ProductName,
-  ProductPrice,
+  BoldLabel,
+  RedLabel,
   ProductDescriptions,
+  SeparateSection,
+  CounterButton,
+  CounterLabel,
 } from './styled';
+import Button from '../Button';
 
 function ProductModal({
-  image = 'https://source.unsplash.com/random/100x100',
-  name = 'Cabai Merah Super cap Jali Jali (/kg)',
-  price = 35000,
-  descriptions = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa, diam facilisi tristique laoreet auctor elementum. Massa, diam facilisi tristique laoreet auctor elementum.  consectetur adipiscing elit.',
+  image = '',
+  name = '',
+  price = 0,
+  quantity = 0,
+  descriptions = '',
+  onAddQuantity = () => {},
+  onRemoveQuantity = () => {},
+  onAddToCardPress = () => {},
+  onPaymentPress = () => {},
 }) {
   const [isModalVisible, setModalVisibility] = useState(false);
 
@@ -37,11 +46,41 @@ function ProductModal({
             <ProductInfoContainer>
               <ProductImage source={{uri: image}} />
               <ProductInfo>
-                <ProductName>{name}</ProductName>
-                <ProductPrice>Rp. {price}</ProductPrice>
+                <BoldLabel>{name}</BoldLabel>
+                <RedLabel>Rp. {price}</RedLabel>
               </ProductInfo>
             </ProductInfoContainer>
             <ProductDescriptions>{descriptions}</ProductDescriptions>
+            <SeparateSection>
+              <BoldLabel>Jumlah Beli</BoldLabel>
+              <SeparateSection>
+                <CounterButton onPress={onAddQuantity}>
+                  <Icon name="md-remove" color="#fff" size={20} />
+                </CounterButton>
+                <CounterLabel>
+                  <Text>{quantity}</Text>
+                </CounterLabel>
+                <CounterButton onPress={onRemoveQuantity} isAdd>
+                  <Icon name="md-add" color="#fff" size={20} />
+                </CounterButton>
+              </SeparateSection>
+            </SeparateSection>
+            <SeparateSection>
+              <BoldLabel>Total Bayar</BoldLabel>
+              <RedLabel>Rp. {price * quantity}</RedLabel>
+            </SeparateSection>
+            <SeparateSection>
+              <Button
+                onPress={onAddToCardPress}
+                style={{width: '45%'}}
+                isOutline
+              >
+                Add to Cart
+              </Button>
+              <Button onPress={onPaymentPress} style={{width: '45%'}}>
+                Bayar
+              </Button>
+            </SeparateSection>
           </ModalContent>
         </ModalContainer>
       </Modal>
