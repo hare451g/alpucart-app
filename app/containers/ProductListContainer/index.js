@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text, FlatList} from 'react-native';
+import {View, Text} from 'react-native';
 
 import ProductListItem from '../../components/ProductListItem';
+import ProductModal from '../../components/ProductModal';
 
 import {productListMock} from './product.mock';
-import ProductModal from '../../components/ProductModal';
+import {ListContainer, ListItemWrapper} from './styled';
 
 function ProductListContainer(props) {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -50,30 +51,19 @@ function ProductListContainer(props) {
 
   if (productList && productList.length > 0) {
     return (
-      <View
-        style={{
-          alignItems: 'stretch',
-          justifyContent: 'center',
-        }}
-      >
-        <FlatList
-          data={productList}
-          renderItem={({item: product}) => (
-            <View
-              style={{
-                flex: 1,
-                padding: 8,
-              }}
-            >
+      <>
+        <ListContainer>
+          {productList.map((product, index) => (
+            <ListItemWrapper>
               <ProductListItem
                 {...product}
                 onPress={() => onSelectProduct(product)}
+                index={index}
+                key={`product-${product.id}`}
               />
-            </View>
-          )}
-          numColumns={2}
-          keyExtractor={(item, index) => item.id}
-        />
+            </ListItemWrapper>
+          ))}
+        </ListContainer>
         <ProductModal
           {...selectedProduct}
           onAddQuantity={onAddQuantity}
@@ -83,7 +73,7 @@ function ProductListContainer(props) {
           isModalVisible={isModalVisible}
           toggleModal={toggleModal}
         />
-      </View>
+      </>
     );
   } else {
     return (
