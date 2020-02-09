@@ -15,9 +15,10 @@ function ProductListItem({
   name = '',
   price = '',
   onPress = () => {},
+  index = 0,
 }) {
   return (
-    <ProductContainer>
+    <ProductContainer isEven={index % 2 == 0}>
       <View>
         <ProductImage source={{uri: image}} />
       </View>
