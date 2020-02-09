@@ -1,11 +1,16 @@
+import {Dimensions} from 'react-native';
 import styled from 'styled-components/native';
-import Button from '../../components/Button';
 
 const ProductContainer = styled.View`
+  width: ${(Dimensions.get('window').width - 24) / 2}px;
   height: 224px;
   background: #ffffff;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  ${props => (props.isEven ? `margin-right: 8px` : `margin-left: 8px`)};
 `;
 
 const ProductImage = styled.Image`
@@ -15,6 +20,7 @@ const ProductImage = styled.Image`
 `;
 
 const ProductName = styled.Text`
+  height: 54px;
   padding: 8px;
   font-family: Montserrat;
   font-style: normal;
