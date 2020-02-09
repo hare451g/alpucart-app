@@ -2,7 +2,6 @@ import styled from 'styled-components/native';
 import Button from '../../components/Button';
 
 const ProductContainer = styled.View`
-  width: 156px;
   height: 224px;
   background: #ffffff;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
@@ -10,7 +9,6 @@ const ProductContainer = styled.View`
 `;
 
 const ProductImage = styled.Image`
-  width: 156px;
   height: 105px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
