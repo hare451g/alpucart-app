@@ -23,6 +23,20 @@ const productListMock = [
     image: 'https://source.unsplash.com/random/156x105',
     price: 42000,
   },
+
+  {
+    id: 5,
+    name: 'Paprika hijau',
+    image: 'https://source.unsplash.com/random/156x105',
+    price: 42000,
+  },
+
+  {
+    id: 6,
+    name: 'Mangga besar / 100 gr',
+    image: 'https://source.unsplash.com/random/156x105',
+    price: 42000,
+  },
 ];
 
 export {productListMock};
