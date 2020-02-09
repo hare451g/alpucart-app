@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Modal, Text, TouchableHighlight, View, Image} from 'react-native';
+import React from 'react';
+import {Modal, Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import {
@@ -28,13 +28,9 @@ function ProductModal({
   onRemoveQuantity = () => {},
   onAddToCardPress = () => {},
   onPaymentPress = () => {},
+  isModalVisible = false,
+  toggleModal = () => {},
 }) {
-  const [isModalVisible, setModalVisibility] = useState(false);
-
-  const toggleModal = () => {
-    setModalVisibility(!isModalVisible);
-  };
-
   return (
     <View style={{marginTop: 22}}>
       <Modal animationType="slide" visible={isModalVisible} transparent>
@@ -84,10 +80,6 @@ function ProductModal({
           </ModalContent>
         </ModalContainer>
       </Modal>
-
-      <TouchableHighlight onPress={toggleModal}>
-        <Text>Show Modal</Text>
-      </TouchableHighlight>
     </View>
   );
 }
