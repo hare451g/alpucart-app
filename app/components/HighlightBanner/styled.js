@@ -6,7 +6,8 @@ const TouchableContainer = styled.TouchableOpacity`
   min-height: 100px;
   border-radius: 8px;
   background-color: #ffffff;
-  ${props => props.isSelected && `background-color: #2eab53;`}
+  background: rgba(46, 171, 83, 0.27);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
 const Background = styled.ImageBackground`
